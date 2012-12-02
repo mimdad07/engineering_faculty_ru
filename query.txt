@@ -1,0 +1,587 @@
+
+-- ...............................  Drop  ..........................
+
+-- drop database db_student_digital_info ;
+ 
+
+ 
+
+-- ..........................  Create Database  ........................
+
+create database db_student_digital_info ;
+
+use db_student_digital_info ;
+
+
+
+   
+--        ................... user_login table ..................
+
+ 
+
+create table  tbl_login
+(
+
+  _id int(4) not null auto_increment,
+  username varchar( 50) not null,
+  password varchar(50) not null,
+
+  primary key( _id )  
+
+);
+
+insert into tbl_login( username, password ) values ( '123', '123' );
+
+
+insert into tbl_login( username, password ) values ( 'admin', '12345' );
+
+ 
+
+use db_student_digital_info ;
+
+create table  tbl_faculty_dept
+(
+
+  _id int(4) not null auto_increment,
+  faculty varchar( 50) not null,
+  departments varchar(500) not null,
+
+  primary key( _id )  
+
+);
+ 
+
+ 
+
+
+insert into tbl_faculty_dept( faculty, departments ) 
+	values ( 'Agriculture', 'Agronomy and Agricultural Extension, Animal Husbandry and Veterinary Science, Crop Science and Technology, Fisheries' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Arts', 'Arabic, Bangali, English, Fine Arts, History, Islamic History and Culture, Islamic Studies, Languages, Philosophy, Theatre and Music' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Business Studies', 'Accounting and Information Systems, Finance and Banking, Management, Marketing' );
+
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Engineering', 'Applied Physics and Electronic Engineering, Applied Chemistry and Chemical Engineering, Computer Science and Engineering, Information and Communication Engineering, Materials Science and Engineering' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Law', 'Law and Justice' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Life and Earth Science', 'Botany, Genetic Engineering and Biotechnology, Geography and Environmental Studies, Geology and Mining, Psychology, Zoology' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Science', 'Applied Mathematics, Biochemistry and Molecular Biology, Chemistry, Mathematics, Pharmacy, Physics, Population Science and Human Resource Development, Statistics' );
+
+insert into tbl_faculty_dept( faculty, departments ) values ( 'Social Science', 'Anthropology, Economics, Folklore, Information Sc. and Library Management, Mass Communication and Journlism, Political Science, Public Administration, Sociology, Social Work' );
+
+
+
+
+
+
+
+--                ----------------------------------------------------- tbl_upazila_names  ---------------------------------------------
+ 
+
+use db_student_digital_info ;
+
+create table  tbl_upazila_names
+(
+
+  _id int(4) not null auto_increment,
+  districts varchar( 50) not null,
+  upazilas varchar(500) not null,
+
+  primary key( _id )  
+
+);
+ 
+
+ 
+--                                     -----------    Rangpur --------------------------------------
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Dinajpur', 'Birampur,Birganj,Biral,Bochaganj,Chirirbandar,Phulbari,Ghoraghat,Hakimpur,Kaharole,Khansama,Dinajpur Sadar,Nawabganj,Parbatipur,Manmathapur' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Gaibandha', 'Phulchhari,Gaibandha,Gobindaganj,Palashbari,Sadullapur,Sughatta,Sundarganj' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Kurigram', 'Bhurungamari,Char Rajibpur,Chilmari,Phulbari,Kurigram Sadar,Nageshwari,Rajarhat,Raomari,Ulipur' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Lalmonirhat', 'Aditmari,Hatibandha,Kaliganj,Tushbhander,Lalmonirhat Sadar,Patgram' );
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Nilphamari', 'Dimla,Domar,Jaldhaka,Kishoreganj,Nilphamari Sadar,Saidpur' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Panchagarh', 'Atwari,Boda,Debiganj,Panchagarh Sadar,Tetulia' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Rangpur', 'Badarganj,Gangachhara,Kaunia,Rangpur Sadar,Mithapukur,Pirgachha,Pirganj,Taraganj' );
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Thakurgaon', 'Baliadangi,Haripur,Pirganj,Ranisankail,Thakurgaon Sadar' );
+
+
+-- ---------------------------------      Rajshahi ------------------------------------
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Bogra', 'Adamdighi,Bogra Sadar,Dhunat,Dupchanchia,Gabtali,Kahaloo,Nandigram,Sariakandi,Sahajanpur,Sherpur,Shibganj,Sonatala' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jaipurhat', 'Akkelpur,Joypurhat Sadar,Kalai,Khetlal,Panchbibi' );
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Naogaon', 'Atrai,Badalgachhi,Manda,Dhamoirhat,Mahadevpur,Naogaon Sadar,Niamatpur,Patnitala,Porsha,Raninagar,Sapahar' );
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Natore', 'Bagatipara,Baraigram,Gurudaspur,Lalpur,Natore Sadar,Singra' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Nawabgonj', 'Bholahat,Gomastapur,Nachole,Nawabganj Sadar,Shibganj' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Pabna', 'Atgharia,Bera,Bhangura,Chatmohar,Faridpur,Ishwardi,Pabna Sadar,Santhia,Sujanagar' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Rajshahi', 'Bagha,Bagmara,Charghat,Durgapur,Godagari,Mohanpur,Motihar,Paba,Puthia,Tanore' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Sirajgonj', 'Belkuchi,Chauhali,Kamarkhanda,Kazipur,Raiganj,Shahjadpur,Sirajgonj Sadar,Tarash,Ullahpara' );
+
+
+--      ------------------------------------------------- Dhaka -----------------------------------------------
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Dhaka', 'Dhanmondi,Kotwali,Motijheel,Ramna,Mohammadpur,Sutrapur and Tejgaon,Gulshan,Lalbagh,Mirpur,Pallabi Sabujbagh,Cantonment,Demra,Hazaribagh,Shyampur,Badda,Kafrul,Kamrangir Char,Khilgaon,Uttara' );
+
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Faridpur', 'Alfadanga,Bhanga,Boalmari,Charbhadrasan,Faridpur Sadar,Madhukhali,Nagarkanda,Sadarpur,Saltha' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Gazipur', 'Gazipur Sadar,Kaliakair,Kaliganj,Kapasia,Tongi,Sreepur' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Gopalganj', 'Gopalganj Sadar,Kashiani,Kotalipara,Muksudpur,Tungipara' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jamalpur', 'Baksiganj,Dewanganj,Islampur,Jamalpur Sadar,Madarganj,Melandaha,Sarishabari' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Kishoreganj', 'Astagram,Bajitpur,Bhairab,Hossainpur,Itna,Karimganj,Katiadi,Kishoreganj Sadar,Kuliarchar,Mithamain,Nikli,Pakundia,Tarail' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Madaripur', 'Rajoir,Madaripur Sadar,Kalkini,Shibchar' );
+    
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Manikganj', 'Daulatpur,Ghior,Harirampur,Manikgonj Sadar,Saturia,Shivalaya,Singair' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Munshiganj', 'Gazaria,Lowhajong,Munshiganj Sadar,Sirajdikhan,Sreenagar,Tongibari' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Mymensingh', 'Bhaluka,Dhobaura,Fulbaria,Gaffargaon,Gauripur,Haluaghat,Ishwarganj,Mymensingh Sadar,Muktagachha,Nandail,Phulpur,Trishal' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Narayanganj', 'Araihazar,Bandar,Narayanganj Sadar,Rupganj,Sonargaon,Fatullah,Siddhirganj' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Netrokona', 'Atpara,Barhatta,Durgapur,Khaliajuri,Kalmakanda,Kendua,Madan,Mohanganj,Netrokona Sadar,Purbadhala' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Rajbari', 'Baliakandi,Goalandaghat,Pangsha,Rajbari Sadar,Kalukhali' );
+ 
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Shariyatpur', 'Bhedarganj,Damudya,Gosairhat,Naria,Shariatpur Sadar,Zanjira,Sakhipur' );
+ 
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Sherpur', 'Jhenaigati,Nakla,Nalitabari,Sherpur Sadar,Sreebardi' );
+ 
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Tangail', 'Gopalpur,Basail,Bhuapur,Delduar,Ghatail,Kalihati,Madhupur,Mirzapur,Nagarpur,Sakhipur,Dhanbari,Tangail Sadar' );
+ 
+ 
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jhalakathi', 'Jhalokati Sadar,Kathalia,Nalchity,Rajapur' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Patuakhali', 'Bauphal,Dasmina,Galachipa,Kalapara,Mirzaganj,Patuakhali Sadar,Rangabali,Dumki' );
+  
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Pirojpur', 'Bhandaria,Kawkhali,Mathbaria,Nazirpur,Pirojpur Sadar,Nesarabad (Swarupkati),Zianagor' );
+  
+
+-- ---------------------------Barisal --------------------------
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Barguna', 'Amtali,Bamna,Barguna Sadar,Betagi,Patharghata, Taltoli' );
+
+ 
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Barisal', 'Agailjhara,Babuganj,Bakerganj,Banaripara,Gaurnadi,Hizla,Barisal Sadar,Mehendiganj,Muladi,Wazirpur' );
+
+ 
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Bhola', 'Bhola Sadar,Burhanuddin,Char Fasson,Daulatkhan,Lalmohan,Manpura,Tazumuddin' );
+
+
+ 
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jhalokati', 'Jhalokati Sadar,Kathalia,Nalchity,Rajapur' );
+
+ 
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Patuakhali', 'Bauphal,Dasmina,Galachipa,Kalapara,Mirzaganj,Patuakhali Sadar,Rangabali,Dumkir' );
+ 
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Pirojpu', 'Bhandaria,Kawkhali,Mathbaria,Nazirpur,Pirojpur Sadar,Nesarabad (Swarupkati),Zianagor' );
+
+
+
+
+
+--                          ----------------Chittagong ----------------------------------------------
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Bandarban', 'Ali Kadam,Bandarban Sadar,Lama,Naikhongchhari,Rowangchhari,Ruma,Thanchi' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Brahmanbaria', 'Akhaura,Bancharampur,Brahmanbaria Sadar,Kasba,Nabinagar,Nasirnagar,Sarail,Ashuganj,Bijoynagar' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Chandpur', 'Chandpur Sadar,Faridganj,Haimchar,Haziganj,Kachua,Matlab,Matlob Uttor,Shahrasti' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Chittagong', 'Anwara,Banshkhali,Boalkhali,Chandanaish,Fatikchhari,Hathazari,Lohagara,Mirsharai,Patiya,Rangunia,Raozan,Sandwip,Satkania,Sitakunda' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Comilla', 'Barura,Brahmanpara,Burichong,Chandina,Chauddagram,Daudkandi,Debidwar,Homna,Laksam,Muradnagar,Nangalkot,Comilla Sadar,Meghna,Titas,Monohargonj,Sadar South' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( "Cox Bazar", "Chakaria,Cox's Bazar Sadar,Kutubdia,Maheshkhali,Ramu,Teknaf,Ukhia,Pekua" );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Feni', 'Chhagalnaiya,Daganbhuiyan,Feni Sadar,Parshuram,Sonagazi,Fulgazi' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Khagrachari', 'Dighinala,Khagrachhari,Lakshmichhari,Mahalchhari,Manikchhari,Matiranga,Panchhari,Ramgarh' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Lakshmipur', 'Lakshmipur Sadar,Raipur,Ramganj,Ramgati,Komolnagar' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Noakhalir', 'Begumganj,Noakhali Sadar,Chatkhil,Companiganj,, Noakhali,Hatiya,Senbagh,Sonaimuri,Subarnachar,Kabirhat' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Rangamati', 'Baghaichari,Barkal,Kawkhali (Betbunia),Belaichari,Kaptai,Juraichari,Langadu,Nanierchar,Rajasthali,Rangamati Sadar' );
+
+
+
+
+--                                   -----------------Khulna --------------------------
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Bagerhat', 'Bagerhat Sadar,Chitalmari,Fakirhat,Kachua,BagerhatMollahat,Mongla,Morrelganj,Rampal,Sarankhola' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Chuadangar', 'Alamdanga,Chuadanga Sadar,Damurhuda,Jibannagar' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jessore', 'Avoynagar,Bagherpara,Chaugachha,Jhikargachha,Keshabpur,Jessore Sadar,Manirampur,Sharsha' );
+
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Jhenaidah', 'Harinakunda,Jhenaidah Sadar,Kaliganj,Kotchandpur,Maheshpur,Shailkupa' );
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Khulna', 'Batiaghata,Dacope,Dumuria,Dighalia,Koyra,Paikgachha,Phultala,Rupsha,Terokhada,Khulna' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Kushtiar', 'Bheramara,Daulatpur,Kushtia,Khoksa,Kumarkhali,Kushtia Sadar,Mirpur' );
+
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Magura', 'Magura Sadar,Mohammadpur,Shalikha,Sreepur,Magura' );
+
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Meherpur', 'Gangni,Meherpur Sadar,Mujibnagar' );
+
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Narail', 'Kalia,Lohagara,Narail,Narail Sadar' );
+
+
+
+insert into tbl_upazila_names( districts, upazilas ) 
+	values ( 'Satkhira', 'Assasuni,Debhata,Kalaroa,Kaliganj,Satkhira Sadar,Shyamnagar,Tala' );
+
+ 
+
+create table  tbl_student_digital_information
+( 
+
+
+  
+  class_roll varchar( 12 ) not null,
+
+  registration varchar( 10 ) not null,
+
+  name varchar( 50) not null,
+
+  name_in_bangla varchar( 50) not null,
+
+  session varchar(12) not null,
+
+  year_semister varchar(6) not null,
+
+  program varchar(10) not null,
+
+  faculty varchar( 50 ) not null,
+
+  department varchar( 50 ) not null,
+
+  hall varchar(50) not null,
+
+  hall_att_res varchar(10) not null,
+
+  quota varchar(15) not null,
+  
+  admission_roll varchar( 12 ) not null,
+
+  units varchar( 5 ) not null,
+
+  score varchar( 8 ) not null,
+
+  position varchar( 5 ) not null,
+ 
+  
+  date_of_birth varchar(12) not null,
+
+  place_of_birth varchar(30) not null,
+
+
+  blood_group varchar(5) not null,
+
+  blood_group_pn varchar(10) not null,
+
+  gender varchar(10) not null,
+
+
+  cell_phone varchar(15) not null,
+
+  e_mail varchar(35) not null,
+
+  nationalid varchar(20) not null,
+
+  passportno varchar(20) not null,
+
+  driving varchar(20) not null,
+
+  religion varchar(10) not null,
+
+  indetification varchar(50) not null,
+
+  height varchar(6) not null,
+
+
+  mothers_name varchar(50) not null,
+
+  mothers_name_in_bangla varchar(50) not null,
+
+  fathers_name varchar(50) not null,
+
+  fathers_name_in_bangla varchar(50) not null,
+
+  guardian_name varchar(50) not null,
+
+ 
+  p_address varchar(50) not null,
+
+  p_post_office varchar(20) not null,
+
+  p_post_code varchar(8) not null,
+
+  p_upazilla varchar(20) not null,
+
+  p_disrtict varchar(20) not null,
+
+
+  pr_address varchar(50) not null,
+
+  pr_post_office varchar(20) not null,
+
+  pr_post_code varchar(8) not null,
+
+  pr_upazila varchar(20) not null,
+
+  pr_disrtict varchar(20) not null,
+
+
+  em_name varchar(50) not null,
+
+  em_rel varchar(20) not null,
+
+  em_tel varchar(20) not null,
+
+
+
+  ssc_inst varchar(60) not null,
+
+  hsc_inst varchar(60) not null,
+
+
+  ssc_subjects varchar(60) not null,
+
+  hsc_subjects varchar(60) not null,
+
+ 
+  ssc_board varchar(15) not null,
+  ssc_roll varchar(10) not null,
+  ssc_pass varchar(15) not null,
+
+  hsc_board varchar(15) not null,
+  hsc_roll varchar(10) not null,
+  hsc_pass varchar(15) not null,
+
+
+  ssc_gpa varchar(10) not null,
+  hsc_gpa varchar(10) not null,
+
+  primary key( admission_roll )  
+
+); 
+
+
+
+
+
+--                -----------------------------------------------------  tbl_admission---------------------------------------------
+
+
+use db_student_digital_info ;
+
+create table  tbl_admission
+( 
+    
+exam_roll varchar( 10 ) not null,
+hsc_board varchar( 10 ) not null,
+hsc_roll varchar( 10 ) not null,
+hsc_year varchar( 10 ) not null,
+ssc_board varchar( 10 ) not null,
+ssc_roll varchar( 10 ) not null,
+ssc_year varchar( 10 ) not null,
+ssc_regi varchar( 10 ) not null,
+ssc_group varchar( 10 ) not null,
+hsc_regno varchar( 10 ) not null,
+fullname varchar( 50 ) not null,
+fname varchar( 50 ) not null,	
+mname varchar( 50 ) not null,	
+ssc_name varchar( 50 ) not null,	
+ssc_fname varchar( 50 ) not null,	
+ssc_mname varchar( 50 ) not null,	
+unit varchar( 10 ) not null,	
+ssc_gpa_ex_four varchar( 10 ) not null,		
+hsc_gpa_ex_four varchar( 10 ) not null,	
+ssc_gpa varchar( 10 ) not null,		
+hsc_gpa varchar( 10 ) not null,			
+ssc_ltrgd varchar( 100 ) not null,	
+hsc_ltrgd varchar( 50 ) not null,	
+quota varchar( 50 ) not null,	
+hsc_fourth_gpa varchar( 10 ) not null,	
+ssc_fourth_gpa varchar( 10 ) not null,	
+ssc_ban_gpa varchar( 10 ) not null,	
+ssc_eng_gpa varchar( 10 ) not null,	
+hsc_math_gpa varchar( 10 ) not null,	
+hsc_chem_gpa varchar( 10 ) not null,	
+hsc_phy_gpa varchar( 10 ) not null,	
+hsc_bio_gpa varchar( 10 ) not null,	
+hsc_ban_gpa varchar( 10 ) not null,	
+hsc_eng_gpa varchar( 10 ) not null,	
+hsc_stat_gpa varchar( 10 ) not null,	
+hsc_agri_gpa varchar( 10 ) not null,	
+hsc_acc_gpa varchar( 10 ) not null,	
+hsc_eco_gpa varchar( 10 ) not null,	
+hsc_fourth_subject varchar( 10 ) not null,	
+ssc_fourth_subject varchar( 10 ) not null,	
+hsc_stud_group varchar( 10 ) not null,
+
+primary key( exam_roll )  
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
