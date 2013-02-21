@@ -1,11 +1,14 @@
 <?php
 	session_start();
  
-	if (isset($_SESSION['username'])) {
+	if (isset($_SESSION['user_or_admin_for_admission_system']) && $_SESSION['status_for_admission_system']=='User') {
 		header('Location: home.php');
 	}
+	else if (isset($_SESSION['user_or_admin_for_admission_system']) && $_SESSION['status_for_admission_system']=='Admin') {
+		header('Location: admin/admin.php');
+	}
 ?>
-
+ 
 
 
 <!DOCTYPE html>
