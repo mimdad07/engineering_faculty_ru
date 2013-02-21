@@ -333,7 +333,7 @@ body {
     <td width="160" align="center" valign="bottom"><p>__________________</p>
     <p>Signature of Candidate</p></td>
     <td width="200" align="center">Show photo
-    <img src= "<?php echo 'photos/' . $units . '-' . $admission_roll.'.png' ;?>" alt="<?php echo $admission_roll.'.png' ;?>" name="logo"  class="style6" id="logo" style="height: 170px; width: 200px; margin-top:-20px;" align="middle" /></td>
+    <img src= "<?php echo 'photos/' . $session . '_'   . $units . '_' . $admission_roll.'.png' ;?>" alt="<?php echo $admission_roll.'.png' ;?>" name="logo"  class="style6" id="logo" style="height: 170px; width: 200px; margin-top:-20px;" align="middle" /></td>
     <td width="135" align="center" valign="bottom">Clear left thumb impression*</td>
   </tr>
 </table>

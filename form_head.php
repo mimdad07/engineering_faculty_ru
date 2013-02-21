@@ -124,14 +124,15 @@
            <tr>
              <td height="31" colspan="2" align="left" class="td_custom_first" >Session:
 <select name="student_session" id = "student_session" style="width:130px; text-align:center;">
-        <option value="2012 - 13"  > 2012 - 13 </option>
-		 <?php
+     <?php
+        echo '<option value="2012 - 13"  > 2012 - 13 </option>';
+		
 					  
                       for( $i =0; $i< count($sessions_array); $i++ )
                       {
                         echo '<option value = "' . $sessions_array[$i] . '">' . $sessions_array[$i] . '</option>';
                       }
-                    ?>
+      ?>
         </select>
                
              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
@@ -647,7 +648,9 @@
 	function insert_or_update( operation )
 	{	 
 	   //save  canvas image.	 
-		photoName = $("#student_units").val() + '-' + $("#student_admission_roll_no").val() + '.png&';  
+		photoName = $("#student_session").val() + '_' + 
+        			$("#student_units").val() + '_' + 
+                    $("#student_admission_roll_no").val() + '.png&';  
 		var canvasPhoto = document.getElementById("display_photo");		
 		var canvasData = photoName + canvasPhoto.toDataURL("image/png");
 		 
@@ -864,12 +867,14 @@
  				
 				 
 		var admissionRoll = $("#student_admission_roll_no").val();
-		var stUnit =  $("#student_units").val(); 
+		var stUnit =  $("#student_units" ).val(); 
+        var session =  $("#student_session" ).val(); 
+        
 		
 		var send_roll = 'admission_roll=' + admissionRoll; 
-		var send_unit = '&units=' + stUnit; 
+		var send_unit = '&units=' + stUnit;  
 		
-		showPhoto( 'photos/' + stUnit + '-' + admissionRoll ); 
+		showPhoto( 'photos/' + session + '_' + stUnit + '_' + admissionRoll ); 
 		
 		var ajax = new XMLHttpRequest();	 
 		ajax.onreadystatechange = function() 
@@ -953,9 +958,7 @@
                     $("#student_ssc_subjects").val( informations[49] );
                     $("#student_hsc_subjects").val( informations[50] );
                     $("#lbl_student_status").text( informations[59] );
-                
-                  
- 					
+                 
 				}
 			} 
 		}  
